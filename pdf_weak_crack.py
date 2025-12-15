@@ -12,11 +12,41 @@ from typing import List, Optional
 
 
 def load_words(path: str) -> List[str]:
+    """
+    Load password wordlist from file.
+    
+    Reads passwords from a text file, one per line.
+    Empty lines and whitespace are ignored.
+    
+    Args:
+        path: Path to wordlist file.
+        
+    Returns:
+        List of password candidates (stripped of whitespace).
+    """
     with open(path, "r", encoding="utf-8", errors="ignore") as f:
         return [line.strip() for line in f if line.strip()]
 
 
 def try_open(pdf_path: str, passwords: List[str]) -> Optional[str]:
+    """
+    Attempt to crack PDF password using wordlist.
+    
+    Tries each password from the wordlist until one succeeds
+    or all are exhausted.
+    
+    Args:
+        pdf_path: Path to the password-protected PDF.
+        passwords: List of password candidates to try.
+        
+    Returns:
+        The password if found, "no_password" if PDF is unencrypted,
+        or None if password not found in wordlist.
+        
+    Raises:
+        ImportError: If PyPDF2 is not installed.
+        FileNotFoundError: If the PDF file does not exist.
+    """
     try:
         from PyPDF2 import PdfReader  # type: ignore
     except Exception:

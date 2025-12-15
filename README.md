@@ -99,21 +99,13 @@ python pdf_weak_crack.py \
 This tool demonstrates:
 - **Weak Passwords**: Easy to crack with wordlists
 - **Password Strength**: Importance of strong, unique passwords
-- **Brute Force**: How attackers attempt to crack passwords
-
-## Password Security Best Practices
-
-1. **Length**: Use at least 12 characters (preferably 16+)
-2. **Complexity**: Include uppercase, lowercase, numbers, and symbols
-3. **Uniqueness**: Don't reuse passwords
-4. **Avoid Common Patterns**: Don't use dictionary words or common patterns
+- **Security Awareness**: Educational tool for understanding password security
 
 ## Use Cases
 
-- **Security Audits**: Test password strength of protected PDFs
+- **Security Audits**: Test PDF password strength
 - **Penetration Testing**: Authorized security assessments
-- **Educational Purposes**: Learn about password security and cracking
-- **Password Policy Testing**: Verify password policies are effective
+- **Educational Purposes**: Learn about password security
 
 ## Legal Disclaimer
 
@@ -139,4 +131,4 @@ This project is for educational purposes only. Use responsibly and ethically.
 
 ---
 
-**Remember**: Only use on PDFs you own or have explicit authorization to test!
+**Remember**: Always use strong passwords when protecting PDFs!
